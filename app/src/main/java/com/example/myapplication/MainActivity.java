@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
     }
+
     @Override
     public void onBackPressed(){
         if(drawerLayout.isDrawerOpen(GravityCompat.START))
@@ -64,4 +64,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void launchWaiterActivity(MenuItem item) {
+        Intent intent = new Intent(this, Activity2.class);
+        startActivity(intent);
+    }
 }
