@@ -98,7 +98,7 @@
         app:layout_constraintVertical_bias="0.054" />
 
     <Spinner
-        android:id="@+id/spinner3"
+        android:id="@+id/zupy"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
@@ -109,7 +109,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
-        android:id="@+id/spinner4"
+        android:id="@+id/dania_glowne"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
@@ -143,8 +143,6 @@
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/spinner4"
         tools:ignore="MissingConstraints">
 
     </LinearLayout>
@@ -165,13 +163,15 @@
         app:layout_constraintVertical_bias="0.473" />
 
     <Spinner
-        android:id="@+id/spinner6"
+        android:id="@+id/napoje"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.061" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
