@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.ListIterator;
 
 public class TworzenieDan {
-    List <Dania> zupyLista = new List<Dania>() {
+    public List <Dania> zupyLista = new List<Dania>() {
 
         Dania zupa1 = new Dania("Pomidorowa", 15.90);
         Dania zupa2 = new Dania("Ogórkowa", 13.90);
@@ -135,7 +135,7 @@ public class TworzenieDan {
             return null;
         }
     };
-    List<Dania>daniaGlowne = new List<Dania>() {
+    public List<Dania>daniaGlowne = new List<Dania>() {
 
         Dania obiad1 = new Dania("Kotlet Schabowy", 24.90);
         Dania obiad2 = new Dania("Pierś z Kurczaka", 22.90);
@@ -262,7 +262,7 @@ public class TworzenieDan {
             return null;
         }
     };
-    List<Dania> napoje = new List<Dania>() {
+    public List<Dania> napoje = new List<Dania>() {
         Dania cola = new Dania("Coca Cola 0,33", 4.90);
         Dania sprite = new Dania("Sprite 0,33", 4.90);
         Dania fanta = new Dania("Fanta 0,33", 4.90);
