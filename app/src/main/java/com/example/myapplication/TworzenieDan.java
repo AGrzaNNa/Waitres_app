@@ -3,17 +3,24 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
 public class TworzenieDan {
-    public List <Dania> zupyLista = new List<Dania>() {
+    Dania zupa1 = new Dania("Pomidorowa", 15.90);
+    Dania zupa2 = new Dania("Ogórkowa", 13.90);
+    Dania zupa3 = new Dania("Rosół", 15);
 
-        Dania zupa1 = new Dania("Pomidorowa", 15.90);
-        Dania zupa2 = new Dania("Ogórkowa", 13.90);
-        Dania zupa3 = new Dania("Rosół", 15);
+    public List <Dania> zupyLista = new ArrayList<Dania>() {
+        public void zapelnijMenu(){
+            zupyLista.add(zupa1);
+            zupyLista.add(zupa2);
+            zupyLista.add(zupa3);
+        }
+
         @Override
         public int size() {
             return 0;
@@ -134,13 +141,29 @@ public class TworzenieDan {
         public List<Dania> subList(int i, int i1) {
             return null;
         }
+
+
     };
+
+    public void setZupyLista(List<Dania> zupyLista) {
+        this.zupyLista = zupyLista;
+        zupyLista.add(zupa1);
+        zupyLista.add(zupa2);
+        zupyLista.add(new Dania("Ramen", 41.90));
+    }
+
+    public List<Dania> getZupyLista() {
+        return zupyLista;
+    }
+
     public List<Dania>daniaGlowne = new List<Dania>() {
 
-        Dania obiad1 = new Dania("Kotlet Schabowy", 24.90);
-        Dania obiad2 = new Dania("Pierś z Kurczaka", 22.90);
-        Dania obiad3 = new Dania("Hamburger Wołowy", 23.90);
-        Dania obiad4 = new Dania("Sphagetti Bolognese", 23.90);
+        public void zapelnijMenu(){
+            daniaGlowne.add(new Dania("Kotlet Schabowy", 24.90));
+            daniaGlowne.add(new Dania("Pierś z Kurczaka", 22.90));
+            daniaGlowne.add(new Dania("Hamburger Wołowy", 23.90));
+            daniaGlowne.add(new Dania("Sphagetti Bolognese", 23.90));
+        }
         @Override
         public int size() {
             return 0;
@@ -263,13 +286,20 @@ public class TworzenieDan {
         }
     };
     public List<Dania> napoje = new List<Dania>() {
-        Dania cola = new Dania("Coca Cola 0,33", 4.90);
+        Dania cola =   new Dania("Coca Cola 0,33", 4.90);
         Dania sprite = new Dania("Sprite 0,33", 4.90);
-        Dania fanta = new Dania("Fanta 0,33", 4.90);
-        Dania herbata = new Dania("Herbata Czarna", 5.90);
-        Dania herbataOwoc = new Dania("Herbata owocowa", 6.90);
-        Dania sokOwocowy = new Dania("Sok świeżo wyciskany", 9.90);
-
+        Dania fanta =  new Dania("Fanta 0,33", 4.90);
+        Dania herbata =new Dania("Herbata Czarna", 5.90);
+        Dania herbat = new Dania("Herbata owocowa", 6.90);
+        Dania socowy = new Dania("Sok świeżo wyciskany", 9.90);
+        public void zapelnijMenu(){
+            napoje.add(new Dania("Coca Cola 0,33", 4.90));
+            napoje.add(new Dania("Sprite 0,33", 4.90));
+            napoje.add(new Dania("Fanta 0,33", 4.90));
+            napoje.add(new Dania("Herbata Czarna", 5.90));
+            napoje.add(new Dania("Herbata owocowa", 6.90));
+            napoje.add(new Dania("Sok świeżo wyciskany", 9.90));
+        }
 
         @Override
         public int size() {
@@ -392,5 +422,6 @@ public class TworzenieDan {
             return null;
         }
     };
+
 //g
 }

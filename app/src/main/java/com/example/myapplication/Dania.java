@@ -16,4 +16,12 @@ public class Dania {
     public double getCenaDania() {
         return cena;
     }
+
+    @Override
+    public String toString() {
+        return "Dania{" +
+                "nazwa='" + nazwa + '\'' +
+                ", cena=" + cena +
+                '}';
+    }
 }
