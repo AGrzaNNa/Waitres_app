@@ -26,7 +26,7 @@ public class wybor_dan extends AppCompatActivity {
         textview=findViewById(R.id.Wynik);
         super.onCreate(savedInstanceState);
         pozyskajDania();
-        setContentView(R.layout.activity_wybor_dan);
+        setContentView(R.layout.orders);
 
         ActionBar actionBar=getSupportActionBar();
         if(actionBar!=null){
