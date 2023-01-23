@@ -101,7 +101,7 @@
                 android:layout_width="307dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Uwtórz Zamówienie"
+                android:text="Utwórz Zamówienie"
                 android:textSize="18dp"
                 app:cornerRadius="20dp" />
 

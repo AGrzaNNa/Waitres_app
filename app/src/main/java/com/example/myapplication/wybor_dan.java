@@ -5,8 +5,12 @@ import static java.lang.Double.parseDouble;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Formatter;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
@@ -26,13 +30,14 @@ public class wybor_dan extends AppCompatActivity {
     TextView textview,Cena;
     EditText editzupy,editdania,editnapoje;
     String Soup, Main_dish,Drinks;
-    Button OrderButton;
+    Button OrderButton,FinalButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         pozyskajDania();
         setContentView(R.layout.orders);
         OrderButton=findViewById(R.id.orderbutton);
+        FinalButton=findViewById(R.id.finalbutton);
         textview=findViewById(R.id.Wynik);
         editzupy=findViewById(R.id.Ilość_zup);
         editdania=findViewById(R.id.Ilość_dańgłównych);
@@ -120,6 +125,13 @@ public class wybor_dan extends AppCompatActivity {
                 }
                 textview.setText(pomoc+Zawartosc);
                 Cena.setText(Double.toString(Suma));
+            }
+        });
+        //TODO Zrobić dodawanie zamówienia na klick do klasy przechowywującej je i dodającej do spinerów w activity2
+        FinalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }
