@@ -18,7 +18,7 @@
 
         <LinearLayout
             android:layout_width="365dp"
-            android:layout_height="701dp"
+            android:layout_height="981dp"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical"
             android:padding="24dp">
@@ -30,7 +30,7 @@
                 android:text="Zamówienie"
                 android:textAlignment="center"
                 android:textColor="#FF4081"
-                android:textSize="36dp"
+                android:textSize="26dp"
                 android:textStyle="bold" />
 
             <EditText
@@ -42,7 +42,7 @@
                 android:drawableLeft="@drawable/ic_baseline_add_24"
                 android:gravity="center"
                 android:inputType="number"
-                android:padding="8dp"
+                android:padding="5dp"
                 android:hint="Ilość Zup"
                 android:textColorHighlight="@color/black" />
 
@@ -60,7 +60,7 @@
                 android:drawableLeft="@drawable/ic_baseline_add_24"
                 android:gravity="center"
                 android:inputType="number"
-                android:padding="8dp"
+                android:padding="5dp"
                 android:hint="Ilość Dań Głównych"
                 android:textColorHighlight="@color/black" />
 
@@ -78,7 +78,7 @@
                 android:drawableLeft="@drawable/ic_baseline_add_24"
                 android:gravity="center"
                 android:inputType="number"
-                android:padding="8dp"
+                android:padding="5dp"
                 android:hint="Ilość Napoi"
                 android:textColorHighlight="@color/black" />
 
@@ -89,18 +89,35 @@
 
 
             <Button
-                android:id="@+id/loginbutton"
+                android:id="@+id/orderbutton"
                 android:layout_width="307dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Utwórz Zamówienie"
+                android:text="Dodaj do Zamówienia"
+                android:textSize="18dp"
+                app:cornerRadius="20dp" />
+            <Button
+                android:id="@+id/finalbutton"
+                android:layout_width="307dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Uwtórz Zamówienie"
                 android:textSize="18dp"
                 app:cornerRadius="20dp" />
 
             <TextView
-                android:id="@+id/Wynik"
+                android:id="@+id/Cena"
                 android:layout_width="305dp"
-                android:layout_height="176dp"
+                android:layout_height="26dp"
+                android:background="@drawable/customedittext_style"
+                android:gravity="center_horizontal"
+                android:hint="Cena"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/Wynik"
+                android:layout_width="303dp"
+                android:layout_height="144dp"
                 android:background="@drawable/customedittext_style"
                 android:gravity="center_horizontal"
                 android:hint="Zamówienie" />
