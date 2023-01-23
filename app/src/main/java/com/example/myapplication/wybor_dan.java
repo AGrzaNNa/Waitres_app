@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import static java.lang.Double.parseDouble;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +16,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -129,13 +131,18 @@ public class wybor_dan extends AppCompatActivity {
         });
         //TODO Zrobić dodawanie zamówienia na klick do klasy przechowywującej je i dodającej do spinerów w activity2
         FinalButton.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View view) {
-
+                String cena=Cena.getText().toString();
+                String text=textview.getText().toString();
+                zamówieniaLista.add(new Zamówienia(cena,text));
+                //Cena.setText(""); czyszczenie okna
+                //textview.setText("");
             }
         });
     }
-
+    public List<Zamówienia> zamówieniaLista=new ArrayList<Zamówienia>(){};
     public List<Dania> zupy = new ArrayList<Dania>(){};
     public List<Dania> daniaGlowne = new ArrayList<Dania>(){};
     public List<Dania> napoje = new ArrayList<Dania>(){};
