@@ -2,12 +2,13 @@ package com.example.myapplication;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class Zamówienia {
+public class Zamówienia  {
     String czasutworzenia;
     String cena;
     String textzamowienie;
@@ -19,9 +20,8 @@ public class Zamówienia {
         this.cena=cena;
         this.textzamowienie=textzamowienie;
     }
-
-    public String getCzasutworzenia() {
-        return czasutworzenia;
+    public String WyswietlZamowienie(Zamówienia zam){
+        return"Nr zamówienia: "+zam.czasutworzenia+"\n\n"+zam.textzamowienie+"\n\nSuma do zapłaty = "+zam.cena;
     }
     public String [] ZwróćNazweZamówienia(List<Zamówienia> lista){
         String []Names=new String[lista.size()];
@@ -30,7 +30,7 @@ public class Zamówienia {
         }
         return Names;
     }
-    public String WyswietlZamowienie(Zamówienia zam){
-        return"Nr zamówienia: "+zam.czasutworzenia+"\n\n"+zam.textzamowienie+"\n\nSuma do zapłaty = "+zam.cena;
+    public String getCzasutworzenia() {
+        return czasutworzenia;
     }
 }
