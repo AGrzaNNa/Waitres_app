@@ -142,7 +142,7 @@ public class wybor_dan extends AppCompatActivity {
             }
         });
     }
-    public List<Zamówienia> zamówieniaLista=new ArrayList<Zamówienia>(){};
+    public static List<Zamówienia> zamówieniaLista=new ArrayList<Zamówienia>(){};
     public List<Dania> zupy = new ArrayList<Dania>(){};
     public List<Dania> daniaGlowne = new ArrayList<Dania>(){};
     public List<Dania> napoje = new ArrayList<Dania>(){};

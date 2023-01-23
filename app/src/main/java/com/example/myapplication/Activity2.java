@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Activity2 extends AppCompatActivity {
     String Zam;
     @Override
@@ -34,8 +35,9 @@ public class Activity2 extends AppCompatActivity {
                 OpenActivity();
             }
         });
+
         Spinner ord = (Spinner) findViewById(R.id.Zamówienia);
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item,ZwróćNazweZamówienia(zamówieniaLista));
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item,ZwróćNazweZamówienia(wybor_dan.zamówieniaLista));
         ord.setAdapter(adapter);
         ord.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -48,9 +50,20 @@ public class Activity2 extends AppCompatActivity {
             }
         });
     }
+    public String [] ZwróćNazweZamówienia(List<Zamówienia> lista){
+        String []Names=new String[lista.size()];
+        for(int i=0;i<lista.size();i++){
+            Names[i]="Zamówienie"+lista.get(i).getCzasutworzenia();
+        }
+        return Names;
+    }
+    public String WyswietlZamowienie(Zamówienia zam){
+        return"Nr zamówienia: "+zam.czasutworzenia+"\n\n"+zam.textzamowienie+"\n\nSuma do zapłaty = "+zam.cena;
+    }
 
     public void OpenActivity(){
         Intent intent = new Intent(this, wybor_dan.class);
         startActivity(intent);
     }
+
 }

@@ -20,16 +20,7 @@ public class Zamówienia  {
         this.cena=cena;
         this.textzamowienie=textzamowienie;
     }
-    public String WyswietlZamowienie(Zamówienia zam){
-        return"Nr zamówienia: "+zam.czasutworzenia+"\n\n"+zam.textzamowienie+"\n\nSuma do zapłaty = "+zam.cena;
-    }
-    public String [] ZwróćNazweZamówienia(List<Zamówienia> lista){
-        String []Names=new String[lista.size()];
-        for(int i=0;i<lista.size();i++){
-            Names[i]=lista.get(i).getCzasutworzenia();
-        }
-        return Names;
-    }
+
     public String getCzasutworzenia() {
         return czasutworzenia;
     }
