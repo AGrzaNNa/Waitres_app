@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,8 @@ import java.util.List;
 
 public class Activity2 extends AppCompatActivity {
     String Zam;
+    Button fbutton;
+    TextView ordtxt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +30,11 @@ public class Activity2 extends AppCompatActivity {
         if(actionBar!=null){
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+        fbutton=findViewById(R.id.orderbutton);
+        ordtxt=findViewById(R.id.Ordertxt);
 
         Button Button=findViewById(R.id.button);
+
         Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,11 +55,22 @@ public class Activity2 extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
+        fbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[]tab=ZwróćNazweZamówienia(wybor_dan.zamówieniaLista);
+                for(int x=0;x< tab.length;x++){
+                    if(Zam.equals(tab[x])){
+                        ordtxt.setText(WyswietlZamowienie(wybor_dan.zamówieniaLista.get(x)));
+                    }
+                }
+            }
+        });
     }
     public String [] ZwróćNazweZamówienia(List<Zamówienia> lista){
         String []Names=new String[lista.size()];
         for(int i=0;i<lista.size();i++){
-            Names[i]="Zamówienie"+lista.get(i).getCzasutworzenia();
+            Names[i]=lista.get(i).getCzasutworzenia();
         }
         return Names;
     }

@@ -60,7 +60,7 @@
                 app:cornerRadius="20dp" />
 
             <Button
-                android:id="@+id/loginbutton"
+                android:id="@+id/orderbutton"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
@@ -69,7 +69,7 @@
                 app:cornerRadius="20dp" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/Ordertxt"
                 android:layout_width="305dp"
                 android:layout_height="312dp"
                 android:hint="Podgląd"

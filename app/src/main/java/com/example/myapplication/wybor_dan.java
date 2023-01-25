@@ -137,8 +137,8 @@ public class wybor_dan extends AppCompatActivity {
                 String cena=Cena.getText().toString();
                 String text=textview.getText().toString();
                 zamówieniaLista.add(new Zamówienia(cena,text));
-                //Cena.setText(""); czyszczenie okna
-                //textview.setText("");
+                Cena.setText("");
+                textview.setText("");
             }
         });
     }
