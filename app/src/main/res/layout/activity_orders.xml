@@ -68,14 +68,24 @@
                 android:textSize="18dp"
                 app:cornerRadius="20dp" />
 
+
             <TextView
                 android:id="@+id/Ordertxt"
                 android:layout_width="305dp"
-                android:layout_height="312dp"
-                android:hint="Podgląd"
-                android:gravity="center_horizontal"
+                android:layout_height="239dp"
                 android:background="@drawable/customedittext_style"
-                />
+                android:gravity="center_horizontal"
+                android:hint="Podgląd" />
+
+
+            <Button
+                android:id="@+id/deleteorder"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="0dp"
+                android:text="Usuń Zamówienie"
+                android:textSize="18dp"
+                app:cornerRadius="20dp" />
 
 
         </LinearLayout>

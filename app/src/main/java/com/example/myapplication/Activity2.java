@@ -19,7 +19,7 @@ import java.util.List;
 
 public class Activity2 extends AppCompatActivity {
     String Zam;
-    Button fbutton;
+    Button fbutton,deleteOrd;
     TextView ordtxt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class Activity2 extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
         fbutton=findViewById(R.id.orderbutton);
+        deleteOrd=findViewById(R.id.deleteorder);
         ordtxt=findViewById(R.id.Ordertxt);
 
         Button Button=findViewById(R.id.button);
@@ -64,6 +65,18 @@ public class Activity2 extends AppCompatActivity {
                         ordtxt.setText(WyswietlZamowienie(wybor_dan.zamówieniaLista.get(x)));
                     }
                 }
+            }
+        });
+        deleteOrd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[]tab=ZwróćNazweZamówienia(wybor_dan.zamówieniaLista);
+                for(int x=0;x< tab.length;x++){
+                    if(Zam.equals(tab[x])){
+                        wybor_dan.zamówieniaLista.remove(x);
+                    }
+                }
+                ordtxt.setText("");
             }
         });
     }
